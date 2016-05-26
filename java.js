@@ -6,16 +6,24 @@ function AdventureGame(begin) {
       alert ("You arrive at the village market and purchase a sword, time to go back to your burnt up cottage");
       var response2 = prompt("Now which way do you want to go?");
       switch(response2) {
-        case "east": var sword = prompt ("You make your way back to your plebian shantytown, but now armed with a dragonslaying sword");
-        switch(sword) {
-          case "south":
-            alert ("time to slay the dragon!!!")
-            alert ("as you enter the dragons layer, you realize that you are no mighty hero, but a simple peasant. The dragon roasts you fam");
-            return false;
+        case "east":
+            var sword = prompt ("You make your way back to your plebian shantytown, but now armed with a dragonslaying sword");
+            switch(sword) {
+              case "south":
+                alert ("time to slay the dragon!!!")
+                alert ("as you enter the dragons layer, you realize that you are no mighty hero, but a simple peasant. The dragon roasts you fam");
+                return false;
+                break;
+              default: prompt("shouldn't you be heading south to slay the dragon?")
+                return prompt(sword)
+                break;
+            }
             break;
-            default: prompt("shouldn't you be heading south to slay the dragon?")
-            break;
-        }
+        default:
+          prompt ("go back east you have to slay the dragon");
+          console.log("THIS SHOULD BE SOUTH: ", sword);
+          break;
+
         break;
         case "west"||"north"||"south":
         alert ("you are lost, time to turn around");
